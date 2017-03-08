@@ -1,0 +1,8 @@
+*.swatches
+.idea
+**/published
+*.mb
+*.pyc
+coverage
+dist
+*.egg-info
