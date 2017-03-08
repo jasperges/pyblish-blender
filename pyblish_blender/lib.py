@@ -137,9 +137,13 @@ def deregister_host():
 
 def register_plugins():
     # Register accompanying plugins
-    plugin_path = os.path.dirname(plugins.__file__)
-    pyblish.api.register_plugin_path(plugin_path)
-    print("pyblish: Registered %s" % plugin_path)
+    plugin_paths = (
+        os.path.dirname(plugins.__file__),
+        os.path.expanduser("~/blender_scripts/pyblish_plugins"),
+        )
+    for plugin_path in plugin_paths:
+        pyblish.api.register_plugin_path(plugin_path)
+        print("pyblish: Registered %s" % plugin_path)
 
 
 def pyblish_menu_draw(self, context):
