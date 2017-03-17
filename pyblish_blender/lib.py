@@ -22,7 +22,7 @@ self._has_menu = False
 self._registered_gui = None
 
 
-class Pyblish(bpy.types.Operator):
+class ShowPyblish(bpy.types.Operator):
     """Show the Pyblish UI."""
     bl_idname = "wm.pyblish"
     bl_label = "Pyblish"
@@ -110,12 +110,12 @@ def teardown():
 
 def register_classes():
     """Register Blender classes."""
-    bpy.utils.register_class(Pyblish)
+    bpy.utils.register_class(ShowPyblish)
 
 
 def deregister_classes():
     """Unregister Blender classes."""
-    bpy.utils.unregister_class(Pyblish)
+    bpy.utils.unregister_class(ShowPyblish)
 
 
 def deregister_plugins():
@@ -210,22 +210,6 @@ def _show_no_gui():
     # TODO
     return
 
-    messagebox = QtWidgets.QMessageBox()
-    messagebox.setIcon(messagebox.Warning)
-    messagebox.setWindowIcon(QtGui.QIcon(os.path.join(
-        os.path.dirname(pyblish.__file__),
-        "icons",
-        "logo-32x32.svg"))
-    )
-
-    spacer = QtWidgets.QWidget()
-    spacer.setMinimumSize(400, 0)
-    spacer.setSizePolicy(QtWidgets.QSizePolicy.Minimum,
-                         QtWidgets.QSizePolicy.Expanding)
-
-    layout = messagebox.layout()
-    layout.addWidget(spacer, layout.rowCount(), 0, 1, layout.columnCount())
-
     messagebox.setWindowTitle("Uh oh")
     messagebox.setText("No registered GUI found.")
 
@@ -271,6 +255,3 @@ def _show_no_gui():
             "These interfaces are currently registered."
             "\n"
             "%s" % "\n".join(pyblish.api.registered_guis()))
-
-    messagebox.setStandardButtons(messagebox.Ok)
-    messagebox.exec_()
