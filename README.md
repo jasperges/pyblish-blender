@@ -41,7 +41,7 @@ To get started using pyblish-blender, run `setup()` at startup of your applicati
 ```python
 # 1. Register your favourite GUI
 import pyblish.api
-pyblish.api.register_gui("pyblish_lite")
+pyblish.api.register_gui("pyblish_qml")
 
 # 2. Set-up Pyblish for blender
 import pyblish_blender
@@ -68,7 +68,7 @@ pyblish_blender.setup()
 
 The `setup()` command will:
 
-1. Register `blender` and `mayapy` as as a ["host"](http://api.pyblish.com/pages/Plugin.hosts.html) to Pyblish, allowing plug-ins to be filtered accordingly.
+1. Register `blender` as as a ["host"](http://api.pyblish.com/pages/Plugin.hosts.html) to Pyblish, allowing plug-ins to be filtered accordingly.
 2. Append a new menu item, "Publish" to your File-menu
 3. Register a minimal set of plug-ins that are common across all integrations.
 
@@ -93,7 +93,7 @@ pyblish_blender.setup(menu=False)
 
 ##### Manually show GUI
 
-The menu-button is set to run `show()`, which you may also manually call yourself, such as from a shelf-button.
+The menu-button is set to run `show()`, which you may also manually call yourself, such as from a button.
 
 ```python
 import pyblish_blender
@@ -123,8 +123,8 @@ This will do the opposite of `setup()` and clean things up for you.
 
 In the event that no GUI is registered upon running `setup()`, the button will provide the *user* with this information on how they can get up and running on their own.
 
-![image](https://cloud.githubusercontent.com/assets/2152766/16318872/d63b7f60-3988-11e6-9431-f64991aabef3.png)
+*TODO*
 
-![image](https://cloud.githubusercontent.com/assets/2152766/16318883/ddf159f0-3988-11e6-8ef5-af5fd8dde725.png)
+##### TODO
 
-![image](https://cloud.githubusercontent.com/assets/2152766/16318893/e7d4cc9a-3988-11e6-92e9-c16037e51fb7.png)
+Turn pyblish-blender into a proper Blender addon.

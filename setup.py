@@ -33,7 +33,7 @@ setup(
     url="https://github.com/pyblish/pyblish-blender",
     license="LGPL",
     author="Abstract Factory and Contributors",
-    author_email="jaspervannieuwenhuizen@gmail.com",
+    author_email="marcus@abstractfactory.io",
     description="Blender Pyblish package",
     long_description=readme,
     zip_safe=False,
