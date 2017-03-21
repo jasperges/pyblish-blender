@@ -144,6 +144,7 @@ def register_plugins():
 
 def pyblish_menu_draw(self, context):
     """Draw the Pyblish entry in the file menu."""
+    self.layout.separator()
     self.layout.operator("wm.pyblish")
 
 
