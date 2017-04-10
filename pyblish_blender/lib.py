@@ -1,6 +1,6 @@
 # Standard library
-import os
 import sys
+import os
 import inspect
 import contextlib
 
@@ -142,7 +142,7 @@ def deregister_host():
 
 
 def register_plugins():
-    # Register accompanying plugins
+    """Register accompanying plugins"""
     plugin_paths = (
         os.path.dirname(plugins.__file__),
         os.path.expanduser("~/blender_scripts/pyblish_plugins"),
@@ -153,7 +153,7 @@ def register_plugins():
 
 
 def pyblish_menu_draw(self, context):
-    """Draw the Pyblish entry in the file menu."""
+    """Draw the Pyblish entry in the file menu"""
     self.layout.separator()
     self.layout.operator("wm.pyblish")
 
