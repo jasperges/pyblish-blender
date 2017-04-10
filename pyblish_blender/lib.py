@@ -52,8 +52,14 @@ def setup(menu=True):
     register_classes()
     register_plugins()
     register_host()
-    pyblish_qml.api.register_python_executable("/Users/jasperge/dev/pyblish/venv/bin/python")
-    pyblish_qml.api.register_pyqt5("/Users/jasperge/dev/pyblish/venv/lib/python3.5/site-packages/PyQt5")
+    if sys.platform == "darwin":
+        pyblish_qml.api.register_python_executable("/Users/jasperge/dev/pyblish/venv/bin/python")
+        pyblish_qml.api.register_pyqt5("/Users/jasperge/dev/pyblish/venv/lib/python3.5/site-packages/PyQt5")
+    elif sys.platform == "linux":
+        pyblish_qml.api.register_python_executable("/home/jasperge/dev/pyblish/venv/bin/python")
+        pyblish_qml.api.register_pyqt5("/home/jasperge/dev/pyblish/venv/lib64/python3.5/site-packages/PyQt5")
+    else:
+        pass
     pyblish.api.register_gui("pyblish_qml")
 
     if menu:
