@@ -52,8 +52,6 @@ def setup(menu=True):
     register_classes()
     register_plugins()
     register_host()
-    pyblish_qml.api.register_python_executable("/Users/jasperge/dev/pyblish/venv/bin/python")
-    pyblish_qml.api.register_pyqt5("/Users/jasperge/dev/pyblish/venv/lib/python3.5/site-packages/PyQt5")
     pyblish.api.register_gui("pyblish_qml")
 
     if menu:
