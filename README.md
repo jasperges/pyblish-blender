@@ -123,11 +123,7 @@ This will do the opposite of `setup()` and clean things up for you.
 
 In the event that no GUI is registered upon running `setup()`, the button will provide the *user* with this information on how they can get up and running on their own.
 
-<<<<<<< HEAD
-*TODO*
-=======
 *This is not implemented yet.*
->>>>>>> master
 
 ##### TODO
 
