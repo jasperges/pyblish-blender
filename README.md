@@ -72,7 +72,7 @@ The `setup()` command will:
 2. Append a new menu item, "Publish" to your File-menu
 3. Register a minimal set of plug-ins that are common across all integrations.
 
-![image](https://cloud.githubusercontent.com/assets/2152766/16318991/49012c02-3989-11e6-9602-7ec3d7823b77.png)
+![image](https://cloud.githubusercontent.com/assets/3788756/24167740/279d5346-0e78-11e7-8f7d-2c524372a911.png)
 
 <br>
 <br>
@@ -123,7 +123,11 @@ This will do the opposite of `setup()` and clean things up for you.
 
 In the event that no GUI is registered upon running `setup()`, the button will provide the *user* with this information on how they can get up and running on their own.
 
+<<<<<<< HEAD
 *TODO*
+=======
+*This is not implemented yet.*
+>>>>>>> master
 
 ##### TODO
 

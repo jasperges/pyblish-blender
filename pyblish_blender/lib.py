@@ -52,8 +52,11 @@ def setup(menu=True):
     register_classes()
     register_plugins()
     register_host()
+<<<<<<< HEAD
     pyblish_qml.api.register_python_executable(os.path.expanduser("~/.virtualenvs/pyblish-d29qYy66/bin/python"))
     pyblish_qml.api.register_pyqt5(os.path.expanduser("~/.virtualenvs/pyblish-d29qYy66/lib/python3.6/site-packages/PyQt5"))
+=======
+>>>>>>> master
     pyblish.api.register_gui("pyblish_qml")
 
     if menu:
@@ -147,7 +150,11 @@ def register_plugins():
 
 
 def pyblish_menu_draw(self, context):
+<<<<<<< HEAD
     """Draw the Pyblish entry in the file menu"""
+=======
+    """Draw the Pyblish entry in the file menu."""
+>>>>>>> master
     self.layout.separator()
     self.layout.operator("wm.pyblish")
 
