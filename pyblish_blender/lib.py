@@ -147,12 +147,12 @@ def pyblish_menu_draw(self, context):
 
 
 def add_to_filemenu():
-    bpy.types.INFO_MT_file.append(pyblish_menu_draw)
+    bpy.types.TOPBAR_MT_file.append(pyblish_menu_draw)
 
 
 def remove_from_filemenu():
     """Remove Pyblish from file menu"""
-    bpy.types.INFO_MT_file.remove(pyblish_menu_draw)
+    bpy.types.TOPBAR_MT_file.remove(pyblish_menu_draw)
 
 
 @contextlib.contextmanager
